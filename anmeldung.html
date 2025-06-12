@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung</title>
+</head>
+<body>
+    <h1> Anmelden zur Website </h1>
+    <nav>
+        <a href="hello_world.html">Home</a>
+        <a href="ueber_mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <hr>
+
+    <form action="GET">
+        <h2>Persönliche Informationen</h2>
+        
+        <label for ="firstName"> Vorname: </label> <br>
+        <input type="text" name="vorname"  required id="firstName"> <br> 
+        
+        <label for ="lastName"> Nachname: </label> <br>
+        <input type="text" name="nachname"  required id="lastName"> <br> 
+        
+        <label for ="eMail"> Email: </label> <br>
+        <input type="email" name="email"  required id="eMail"> <br> 
+        
+        <label for ="date"> Date: </label> <br>
+        <input type="date" name="date"  required id="date"> <br> 
+        
+        Wie sehr magst du mich:?<br>
+        <input type="range" min="1" max="10" name="slider" value="5" step="1" oninput="sliderValue.value = slider.value"> 
+        <output name="sliderValue" id="sliderValue">5</output> <br>
+
+        Augenfarbe:
+        <br>
+        <input  type="radio" name="Augenfarbe" value="Blau" id="blueEyes">
+        <label for="blueEyes">Blau</label>
+        <br>
+        <input  type="radio" name="Augenfarbe" value="Grün" id="greenEyes">
+        <label for="greenEyes">Grün</label>
+        <br>
+        <input  type="radio" name="Augenfarbe" value="Braun" id="brownEyes">
+        <label for="brownEyes">Braun</label>
+
+        <br>
+        Welchen Kurs möchtest du belegen: <br>
+        <input type="checkbox" name="Kurse" id="kursEthik">
+        <label for ="kursEthik">Ethik</label> 
+        <br>
+        <input type="checkbox" name="Kurse" id="kursGeschichte">
+        <label for ="kursGeschichte">Geschichte</label> 
+        <br>
+        <input type="checkbox" name="Kurse" id="kursPhilosophie">
+        <label for ="kursPhilosophie">Philosophie</label> 
+        <br>
+
+        <p>
+        <input type="submit" value="Registrieren">
+        <input type="reset">
+        </p>
+
+    </form>
+    
+</body>
+</html>

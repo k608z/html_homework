@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierheim – Tieradoption</title>
+</head>
+<body>
+    <h1>Adoptionsanfrage im Tierheim</h1>
+    <p>Bitte fülle das folgende Formular aus, um ein Tier aus unserem Tierheim zu adoptieren. Wir freuen uns auf deine Anfrage!</p>
+
+    <form action="POST">
+        <label for="fullName">Vollständiger Name:</label><br>
+        <input type="text" id="fullName" name="fullName" placeholder="Max Mustermann" required><br><br>
+
+        <label for="email">E-Mail-Adresse:</label><br>
+        <input type="email" id="email" name="email" placeholder="dein@email.de" required><br><br>
+
+        <label for="adoptionDate">Gewünschtes Adoptionsdatum:</label><br>
+        <input type="date" id="adoptionDate" name="adoptionDate" required><br><br>
+
+        <label for="tierart">Welche Tierart möchtest du adoptieren?</label><br>
+        <select id="tierart" name="tierart">
+            <option value="hund">Hund</option>
+            <option value="katze">Katze</option>
+            <option value="kaninchen">Kaninchen</option>
+            <option value="vogel">Vogel</option>
+        </select><br><br>
+
+        <label>Hast du bereits Erfahrung mit Haustieren?</label><br>
+        <input type="radio" id="erfahrungJa" name="erfahrung" value="ja">
+        <label for="erfahrungJa">Ja</label><br>
+        <input type="radio" id="erfahrungNein" name="erfahrung" value="nein">
+        <label for="erfahrungNein">Nein</label><br><br>
+
+        <label>Welche Voraussetzungen kannst du bieten?</label><br>
+        <input type="checkbox" id="garten" name="voraussetzung" value="garten">
+        <label for="garten">Garten</label><br>
+        <input type="checkbox" id="katzennetz" name="voraussetzung" value="katzennetz">
+        <label for="katzennetz">Katzennetz am Balkon</label><br>
+        <input type="checkbox" id="zeit" name="voraussetzung" value="zeit">
+        <label for="zeit">Viel Zeit am Tag</label><br><br>
+
+        <label for="text">Erzähle uns mehr über dich:</label><br>
+        <textarea id="text" name="text" rows="5" cols="40" placeholder="Warum möchtest du ein Tier adoptieren?"></textarea><br><br>
+
+        <label for="sympathie">Wie sehr freust du dich auf dein neues Haustier?</label><br>
+        <input type="range" id="sympathie" name="sympathie" min="1" max="10" value="5" oninput="anzeige.value = sympathie.value">
+        <output id="anzeige" name="anzeige">5</output><br><br>
+
+        <input type="submit" value="Anfrage senden">
+        <input type="reset" value="Zurücksetzen">
+    </form>
+</body>
+</html>
