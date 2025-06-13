@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tierheim – Tieradoption</title>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ueber_mich.html">Über mich</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="hausaufgabe.html">Hausaufgabe</a>
+        </nav>
+    </header>
     <h1>Adoptionsanfrage im Tierheim</h1>
-    <p>Bitte fülle das folgende Formular aus, um ein Tier aus unserem Tierheim zu adoptieren. Wir freuen uns auf deine Anfrage!</p>
+    <p>Bitte fülle das folgende Formular aus, um ein Tier aus unserem Tierheim zu adoptieren. Wir freuen uns auf deine
+        Anfrage!</p>
 
     <form action="POST">
         <label for="fullName">Vollständiger Name:</label><br>
@@ -42,14 +53,17 @@
         <label for="zeit">Viel Zeit am Tag</label><br><br>
 
         <label for="text">Erzähle uns mehr über dich:</label><br>
-        <textarea id="text" name="text" rows="5" cols="40" placeholder="Warum möchtest du ein Tier adoptieren?"></textarea><br><br>
+        <textarea id="text" name="text" rows="5" cols="40"
+            placeholder="Warum möchtest du ein Tier adoptieren?"></textarea><br><br>
 
         <label for="sympathie">Wie sehr freust du dich auf dein neues Haustier?</label><br>
-        <input type="range" id="sympathie" name="sympathie" min="1" max="10" value="5" oninput="anzeige.value = sympathie.value">
+        <input type="range" id="sympathie" name="sympathie" min="1" max="10" value="5"
+            oninput="anzeige.value = sympathie.value">
         <output id="anzeige" name="anzeige">5</output><br><br>
 
         <input type="submit" value="Anfrage senden">
         <input type="reset" value="Zurücksetzen">
     </form>
 </body>
+
 </html>
